@@ -1,24 +1,27 @@
 /**
- * @param {string} s1
- * @param {string} s2
+ * @param {string} first
+ * @param {string} second
  * @return {boolean}
  */
 
-export function isAnagram(s1, s2) {
-	if (s1.length !== s2.length) return false;
+export function isAnagram(first, second) {
+	if (first.length !== second.length) return false;
 
-	let counter1 = {};
-	let counter2 = {};
+	let counter = {};
 
-	for (let val of s1.split('')) {
-		counter1[val] = (counter1[val] || 0) + 1;
+	for (let i = 0; i < first.length; i++) {
+		const letter = first[i];
+		counter[letter] ? (counter[letter] += 1) : (counter[letter] = 1);
 	}
-	for (let val of s2.split('')) {
-		counter2[val] = (counter2[val] || 0) + 1;
-	}
-	for (let key in counter1) {
-		if (!(key in counter2)) return false;
-		if (counter2[key] !== counter1[key]) return false;
+
+	for (let i = 0; i < second.length; i++) {
+		const letter = second[i];
+
+		if (!counter[letter]) {
+			return false;
+		}
+
+		counter[letter] -= 1;
 	}
 
 	return true;
