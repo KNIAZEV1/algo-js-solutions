@@ -8,5 +8,6 @@ describe('Is valid anagram', () => {
 	it('should be INVALID anagram', () => {
 		expect(isAnagram('aaz', 'zza')).toBe(false);
 		expect(isAnagram('awesome', 'awesom')).toBe(false);
+		expect(isAnagram('omg', 'omgg')).toBe(false);
 	});
 });
