@@ -1,5 +1,6 @@
 /**
  * @param {array} arr
+ * @param {number} num
  * @return {number | null}
  */
 
