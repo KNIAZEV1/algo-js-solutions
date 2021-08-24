@@ -1,0 +1,1 @@
+Write a function  which accepts a long `string` and smaller one and counts the number of times a smaller string appears in a longer string.
