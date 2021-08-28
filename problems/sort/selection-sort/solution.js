@@ -1,8 +1,10 @@
+import { swap } from '../utils/swap';
+
 /**
  * @param {array} arr
  * @return {array}
  */
-//
+// O(n^2)
 export function selectionSort(arr) {
 	for (let i = 0; i < arr.length; i++) {
 		let min = i;
@@ -13,9 +15,7 @@ export function selectionSort(arr) {
 			}
 		}
 
-		let temp = arr[i];
-		arr[i] = arr[min];
-		arr[min] = temp;
+		if (i !== min) swap(arr, i, min);
 	}
 
 	return arr;

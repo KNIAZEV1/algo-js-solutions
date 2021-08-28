@@ -1,0 +1,11 @@
+/**
+ * @param {array} arr
+ * @param {number} index1
+ * @param {number} index2
+ * @return {undefined}
+ */
+export function swap(arr, index1, index2) {
+	let temp = arr[index1];
+	arr[index1] = arr[index2];
+	arr[index2] = temp;
+}

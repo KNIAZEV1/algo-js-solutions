@@ -1,7 +1,10 @@
+import { swap } from '../utils/swap';
+
 /**
  * @param {array} arr
  * @return {array}
  */
+
 // O(n^2)
 export function bubbleSort(arr) {
 	let swaps;
@@ -10,15 +13,11 @@ export function bubbleSort(arr) {
 		swaps = false;
 		for (let j = 0; j < i - 1; j++) {
 			if (arr[j] > arr[j + 1]) {
-				let temp = arr[j];
-
-				arr[j] = arr[j + 1];
-				arr[j + 1] = temp;
-
-				swaps = true
+				swap(arr, j, j + 1);
+				swaps = true;
 			}
 		}
-		if (!swaps) break
+		if (!swaps) break;
 	}
 
 	return arr;
