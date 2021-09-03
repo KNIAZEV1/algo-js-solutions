@@ -10,7 +10,7 @@ export function mergeSort(arr) {
 
 	const mid = Math.floor(arr.length / 2);
 	const left = mergeSort(arr.slice(0, mid));
-	const rigth = mergeSort(arr.slice(mid));
+	const right = mergeSort(arr.slice(mid));
 
-	return merge(left, rigth);
+	return merge(left, right);
 }
