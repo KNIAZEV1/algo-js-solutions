@@ -1,6 +1,6 @@
 /**
- * @param {array} arr1 - sorterd
- * @param {array} arr2 - sorterd
+ * @param {array} arr1 - sorted
+ * @param {array} arr2 - sorted
  * @return {array}
  */
 export function merge(arr1, arr2) {
