@@ -1,4 +1,12 @@
-import { getDigitsCount } from './getDigitsCount';
+/**
+ * @param {number} num
+ * @return {number}
+ */
+function getDigitsCount(num) {
+	if (num === 0) return 1;
+
+	return Math.floor(Math.log10(Math.abs(num))) + 1;
+}
 
 /**
  * @param {array} numsList
@@ -8,7 +16,7 @@ import { getDigitsCount } from './getDigitsCount';
 export function getMostDigits(numsList) {
 	let mostDigitsCount = 0;
 
-	for (num of numsList) {
+	for (let num of numsList) {
 		mostDigitsCount = Math.max(mostDigitsCount, getDigitsCount(num));
 	}
 

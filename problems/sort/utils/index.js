@@ -1,3 +1,5 @@
 export * from './swap'
 export * from './merge'
 export * from './getPivotIndex'
+export * from './getMostDigits'
+export * from './getDigitByIndex'
