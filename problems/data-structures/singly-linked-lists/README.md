@@ -3,7 +3,7 @@ A `Linked List` is a data structure that contains a `head`, `tail` and len`gth p
 
 Linked Lists consist of `nodes`, and each node has a `value` and `pointer` to another node or null.
 
-![SLL Scheme](../assets/sll-scheme.png)
+![SLL Scheme](./assets/sll-scheme.png)
 
 So it's just a bunch on nodes pointing to other nodes (one node points the `next` one).
 ##### Comparison with array
