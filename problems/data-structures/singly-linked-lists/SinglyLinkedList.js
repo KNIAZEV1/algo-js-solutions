@@ -13,14 +13,14 @@ class SinglyLinkedList {
 	}
 
 	push(val) {
-		const node = new Node(val)
+		const newNode = new Node(val)
 		
 		if (!this.head) {
-			this.head = node
+			this.head = newNode
 			this.tail = this.head
 		} else {
-			this.tail.next = node
-			this.tail = node
+			this.tail.next = newNode
+			this.tail = newNode
 		}
 
 		this.length++
@@ -49,5 +49,39 @@ class SinglyLinkedList {
 		}
 
 		return current
+	}
+
+	shift() {
+		if (!this.head) return undefined
+
+		const currentHead = this.head
+		const newHead = currentHead.next
+
+		this.head = newHead
+		this.length--
+
+		if (this.length === 0) {
+			this.tail = null
+		}
+
+		return currentHead
+	}
+
+	unshift(val) {
+		const newNode = new Node(val)
+
+		if (!this.head) {
+			this.head = newNode
+			this.tail = this.head
+		} else {
+			const currentHead = this.head
+			
+			newNode.next = currentHead
+			this.head = newNode
+		}
+
+		this.length++
+
+		return this
 	}
 }
