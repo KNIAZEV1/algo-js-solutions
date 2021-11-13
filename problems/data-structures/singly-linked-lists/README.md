@@ -1,7 +1,7 @@
 ## Singly Linked Lists (SLL)
-A `Linked List` is a data structure that contains a `head`, `tail` and len`gth property.
+A `Linked List` is a data structure that contains a `head` (first item), `tail` (last item) and `length` property.
 
-Linked Lists consist of `nodes`, and each node has a `value` and `pointer` to another node or null.
+Linked Lists consist of `nodes`, and each node has a `value` and `pointer` to another node or null. 
 
 ![SLL Scheme](./assets/sll-scheme.png)
 
