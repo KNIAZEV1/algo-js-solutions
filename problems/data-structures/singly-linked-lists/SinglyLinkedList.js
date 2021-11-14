@@ -110,4 +110,34 @@ class SinglyLinkedList {
 
 		return false;
 	}
+
+	insert(idx, val) {
+		if (idx < 0 || idx >= this.length) return false;
+		if (idx === this.length) return !!this.push(val);
+		if (idx === 0) return !!this.unshift(val);
+
+		let newNode = new Node(val);
+		let prevNode = this.get(idx - 1);
+		let tempNext = prevNode.next;
+
+		prevNode.next = newNode;
+		newNode.next = tempNext;
+		this.length++;
+
+		return true;
+	}
+
+	remove(idx) {
+		if (idx < 0 || idx >= this.length) return undefined;
+		if (idx === this.length - 1) return this.pop();
+		if (idx === 0) return this.shift();
+
+		const prevNode = this.get(idx - 1);
+		const nodeToRemove = prevNode.next;
+
+		prevNode.next = nodeToRemove.next;
+		this.length--;
+
+		return nodeToRemove;
+	}
 }
