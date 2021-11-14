@@ -6,7 +6,7 @@ Linked Lists consist of `nodes`, and each node has a `value` and `pointer` to an
 ![SLL Scheme](./assets/sll-scheme.png)
 
 So it's just a bunch on nodes pointing to other nodes (one node points the `next` one).
-##### Comparison with array
+#### Comparison with array
 SLL
 ````
 - don't have indexes
@@ -19,3 +19,8 @@ Array
 - insertion and deletion can be expensive
 - quick access by index
 ````
+#### Big O
+- `insertion` - O(1)
+- `removal` - O(1) / O(n)
+- `searching` - O(n)
+- `access` - O(n)
