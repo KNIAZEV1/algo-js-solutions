@@ -1,11 +1,11 @@
 class Node {
 	constructor(val) {
-		this.val = val;
+		this.value = val;
 		this.next = null;
 	}
 }
 
-class SinglyLinkedList {
+export class SinglyLinkedList {
 	constructor() {
 		this.head = null;
 		this.tail = null;
@@ -103,7 +103,7 @@ class SinglyLinkedList {
 		let foundNode = this.get(idx);
 
 		if (foundNode) {
-			foundNode.val = val;
+			foundNode.value = val;
 
 			return true;
 		}
