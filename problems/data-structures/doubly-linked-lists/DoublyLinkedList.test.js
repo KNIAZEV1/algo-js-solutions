@@ -1,4 +1,4 @@
-import { SinglyLinkedList } from './SinglyLinkedList';
+import { DoublyLinkedList } from './DoublyLinkedList';
 
 const TEST_VALUES = {
 	0: '0',
@@ -8,7 +8,7 @@ const TEST_VALUES = {
 };
 
 function getListWithValues() {
-	const list = new SinglyLinkedList();
+	const list = new DoublyLinkedList();
 	list.push(TEST_VALUES[1]);
 	list.push(TEST_VALUES[2]);
 	list.push(TEST_VALUES[3]);
@@ -16,10 +16,10 @@ function getListWithValues() {
 	return list;
 }
 
-describe('SinglyLinkedList', () => {
+describe('DoublyLinkedList', () => {
 	describe('push', () => {
 		it('should have a node with 123 value', () => {
-			const list = new SinglyLinkedList();
+			const list = new DoublyLinkedList();
 			list.push(TEST_VALUES[1]);
 
 			expect(list.head.value).toBe(TEST_VALUES[1]);
@@ -155,15 +155,6 @@ describe('SinglyLinkedList', () => {
 
 			expect(list.remove(-1)).toBe(undefined);
 			expect(list.remove(list.length)).toBe(undefined);
-		});
-	});
-	describe('reverse', () => {
-		it('should reverse a Singly Linked List', () => {
-			const list = getListWithValues();
-			list.reverse();
-
-			expect(list.get(0).value).toBe(TEST_VALUES[3]);
-			expect(list.get(2).value).toBe(TEST_VALUES[1]);
 		});
 	});
 });

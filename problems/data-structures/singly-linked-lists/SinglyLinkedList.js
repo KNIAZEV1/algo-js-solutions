@@ -112,7 +112,7 @@ export class SinglyLinkedList {
 	}
 
 	insert(idx, val) {
-		if (idx < 0 || idx >= this.length) return false;
+		if (idx < 0 || idx > this.length) return false;
 		if (idx === this.length) return !!this.push(val);
 		if (idx === 0) return !!this.unshift(val);
 
