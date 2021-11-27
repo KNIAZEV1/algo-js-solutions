@@ -25,4 +25,23 @@ describe('BinarySearchTree', () => {
 			expect(bst.insert(9)).toBe(undefined);
 		});
 	});
+
+	describe('contains', () => {
+		it('should return true', () => {
+			const bst = getValidBst(new BinarySearchTree());
+
+			expect(bst.contains(10)).toBe(true);
+			expect(bst.contains(8)).toBe(true);
+			expect(bst.contains(9)).toBe(true);
+			expect(bst.contains(12)).toBe(true);
+		});
+		it('should return false', () => {
+			const bst = getValidBst(new BinarySearchTree());
+
+			expect(bst.contains(11)).toBe(false);
+			expect(bst.contains(7)).toBe(false);
+			expect(bst.contains(13)).toBe(false);
+			expect(bst.contains(123)).toBe(false);
+		});
+	});
 });
