@@ -8,7 +8,13 @@
 
 #### Big O
 
-- `insertion` -
-- `removal` -
-- `searching` -
-- `access` -
+- `insertion` - O(log n), but not guaranteed in worst case
+- `searching` - O(log n), but not guaranteed in worst case
+
+![BST BigO complexity-1](./assets/bst-bigo-1.png)
+![BST BigO insertion-2](./assets/bst-bigo-2.png)
+
+#### Worst case O(n)
+
+![BST Big O worst case](./assets/bst-worst.png)
+
