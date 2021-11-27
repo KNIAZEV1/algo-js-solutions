@@ -17,4 +17,5 @@
 #### Worst case O(n)
 
 ![BST Big O worst case](./assets/bst-worst.png)
+<img src="./assets/bst-worst.png" width="500" alt="BST Big O worst case" />
 
