@@ -54,9 +54,6 @@ describe('BinarySearchTree', () => {
 			const bst = getValidBst(new BinarySearchTree());
 
 			expect(bst.bfs()).toEqual([10, 8, 12, 9]);
-			expect(bst.contains(8)).toBe(true);
-			expect(bst.contains(9)).toBe(true);
-			expect(bst.contains(12)).toBe(true);
 		});
 	});
 
@@ -73,6 +70,13 @@ describe('BinarySearchTree', () => {
 				const bst = getValidBst(new BinarySearchTree());
 
 				expect(bst.dfsPostOrder()).toEqual([9, 8, 12, 10]);
+			});
+		});
+		describe('in-order', () => {
+			it('should return a valid list of nodes', () => {
+				const bst = getValidBst(new BinarySearchTree());
+
+				expect(bst.dfsInOrder()).toEqual([8, 9, 10, 12]);
 			});
 		});
 	});

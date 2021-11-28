@@ -107,4 +107,18 @@ export class BinarySearchTree {
 
 		return data;
 	}
+	// depth first search (in-order, starts from root = the last node visited then traverse entire left side back to parent, after that entire right side)
+	dfsInOrder() {
+		const data = [];
+
+		function traverse(node) {
+			if (node.left) traverse(node.left);
+			data.push(node.value);
+			if (node.right) traverse(node.right);
+		}
+
+		traverse(this.root);
+
+		return data;
+	}
 }
