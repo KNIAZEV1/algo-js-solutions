@@ -6,6 +6,10 @@ function getValidBst(bst) {
 	bst.insert(9);
 	bst.insert(12);
 
+	//       10
+	//    8     12
+	//      9
+
 	return bst;
 }
 describe('BinarySearchTree', () => {
@@ -53,6 +57,19 @@ describe('BinarySearchTree', () => {
 			expect(bst.contains(8)).toBe(true);
 			expect(bst.contains(9)).toBe(true);
 			expect(bst.contains(12)).toBe(true);
+		});
+	});
+
+	describe('dfs', () => {
+		describe('pre-order', () => {
+			it('should return a valid list of nodes', () => {
+				const bst = getValidBst(new BinarySearchTree());
+
+				expect(bst.dfsPreOrder()).toEqual([10, 8, 9, 12]);
+				expect(bst.contains(8)).toBe(true);
+				expect(bst.contains(9)).toBe(true);
+				expect(bst.contains(12)).toBe(true);
+			});
 		});
 	});
 });
