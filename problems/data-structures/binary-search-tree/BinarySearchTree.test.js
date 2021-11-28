@@ -44,4 +44,15 @@ describe('BinarySearchTree', () => {
 			expect(bst.contains(123)).toBe(false);
 		});
 	});
+
+	describe('bfs', () => {
+		it('should return a valid list of nodes', () => {
+			const bst = getValidBst(new BinarySearchTree());
+
+			expect(bst.bfs()).toEqual([10, 8, 12, 9]);
+			expect(bst.contains(8)).toBe(true);
+			expect(bst.contains(9)).toBe(true);
+			expect(bst.contains(12)).toBe(true);
+		});
+	});
 });
