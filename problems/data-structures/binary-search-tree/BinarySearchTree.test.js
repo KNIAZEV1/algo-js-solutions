@@ -66,9 +66,13 @@ describe('BinarySearchTree', () => {
 				const bst = getValidBst(new BinarySearchTree());
 
 				expect(bst.dfsPreOrder()).toEqual([10, 8, 9, 12]);
-				expect(bst.contains(8)).toBe(true);
-				expect(bst.contains(9)).toBe(true);
-				expect(bst.contains(12)).toBe(true);
+			});
+		});
+		describe('post-order', () => {
+			it('should return a valid list of nodes', () => {
+				const bst = getValidBst(new BinarySearchTree());
+
+				expect(bst.dfsPostOrder()).toEqual([9, 8, 12, 10]);
 			});
 		});
 	});

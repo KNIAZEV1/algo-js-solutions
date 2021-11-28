@@ -92,4 +92,19 @@ export class BinarySearchTree {
 
 		return data;
 	}
+	// depth first search (post-order, starts from root = the last node visited to left and then right and back to parent)
+	dfsPostOrder() {
+		const data = [];
+
+		function traverse(node) {
+			if (node.left) traverse(node.left);
+			if (node.right) traverse(node.right);
+
+			data.push(node.value);
+		}
+
+		traverse(this.root);
+
+		return data;
+	}
 }
