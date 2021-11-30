@@ -6,7 +6,7 @@
 - in a `Min BH`, `parent` nodes are always `smaller` than `child` nodes
 - `no order` to the `left` and `right`
 
-![BH Scheme](./assets/bh-scheme.png)
+<img src="./assets/bh-scheme.png" width="500" alt="BH Scheme" />
 
 `BH` are used to implement `Priority Queues` and, sometimes, are used with `graph traversal` algos.
 
