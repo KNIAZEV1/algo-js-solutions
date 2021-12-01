@@ -5,6 +5,7 @@
 - in a `Max BH`, `parent` nodes are alwayes `larger` than `child` nodes
 - in a `Min BH`, `parent` nodes are always `smaller` than `child` nodes
 - `no order` to the `left` and `right`
+- `left` children are `filled` out `first`
 
 <img src="./assets/bh-scheme.png" width="500" alt="BH Scheme" />
 
@@ -14,7 +15,6 @@
 
 - each parent has at most two child nodes
 - the `value` of each `parent` node is `always greater` than it's `child` nodes, but `no guarantees` between `sibling` nodes
-- `left` children are `filled` out `first`
 
 #### Min BH
 
@@ -29,5 +29,6 @@
 
 #### Big O
 
-- `insertion` -
-- `searching` -
+- `insertion` - O(log n)
+- `removing` - O(log n)
+- `searching` - O(n), because not ordered like BST, for example.
