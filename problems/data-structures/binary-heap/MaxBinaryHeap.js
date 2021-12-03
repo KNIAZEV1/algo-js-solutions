@@ -28,6 +28,7 @@ export class MaxBinaryHeap {
 			let parentIndex = Math.floor((index - 1) / 2);
 			const parent = this.values[parentIndex];
 
+			// ">=" to make it MinBH
 			if (element <= parent) break;
 
 			this.values[parentIndex] = element;
@@ -51,6 +52,7 @@ export class MaxBinaryHeap {
 			if (leftChildIndex < length) {
 				leftChild = this.values[leftChildIndex];
 
+				// "<" to make it MinBH
 				if (leftChild > element) {
 					swap = leftChildIndex;
 				}
@@ -59,6 +61,7 @@ export class MaxBinaryHeap {
 			if (rightChildIndex < length) {
 				rightChild = this.values[rightChildIndex];
 
+				// "<" to make it MinBH
 				if (
 					(swap === null && rightChild > element) ||
 					(swap !== null && rightChild > leftChild)
