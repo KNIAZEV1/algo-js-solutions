@@ -1,6 +1,6 @@
 # 👋 Heey, let's crack coding challenges and learn algos & commonly used data structures using JavaScript (ES6+)
 
-[![Coverage Status](https://coveralls.io/repos/github/KNIAZEV1/algo-js-solutions/badge.svg)](https://coveralls.io/github/KNIAZEV1/algo-js-solutions)
+[![Coverage Status](https://coveralls.io/repos/github/kniazev1/algo-js-solutions/badge.svg?branch=feature/coveralls)](https://coveralls.io/github/kniazev1/algo-js-solutions?branch=feature/coveralls)
 
 ### What is here:
 
