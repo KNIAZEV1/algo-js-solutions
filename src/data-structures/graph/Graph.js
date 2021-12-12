@@ -36,7 +36,7 @@ export class Graph {
 
 		delete this.adjacencyList[vertex];
 	}
-
+	// recursive dfs
 	DFSr(start) {
 		const result = [];
 		const visited = {};
@@ -57,7 +57,7 @@ export class Graph {
 
 		return result;
 	}
-
+	// iterative dfs
 	DFSi(start) {
 		const stack = [start];
 		const result = [];

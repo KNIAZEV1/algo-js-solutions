@@ -102,7 +102,7 @@ function getGraph() {
 
 	return g;
 }
-
+// Graph Schema:
 //      A
 //    /   \
 //   B    C
@@ -111,7 +111,7 @@ function getGraph() {
 //   \    /
 //     F
 
-/* adjacencyList: {
+/* => adjacencyList: {
 	A: [ 'B', 'C' ],
 	B: [ 'A', 'D' ],
 	C: [ 'A', 'E' ],
