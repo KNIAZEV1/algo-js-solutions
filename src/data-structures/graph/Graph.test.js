@@ -70,6 +70,13 @@ describe('Graph', () => {
 			expect(g.DFSi('A')).toEqual(['A', 'C', 'E', 'F', 'D', 'B']);
 		});
 	});
+	describe('BFS', () => {
+		it('should return a valid list using interative BFS', () => {
+			const g = getGraph();
+
+			expect(g.BFSi('A')).toEqual(['A', 'B', 'C', 'D', 'E', 'F']);
+		});
+	});
 });
 
 function getGraphWithVertecies() {

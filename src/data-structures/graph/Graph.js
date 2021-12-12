@@ -80,4 +80,27 @@ export class Graph {
 
 		return result;
 	}
+	// iterative bfs
+	BFSi(start) {
+		const queue = [start];
+		const result = [];
+		const visited = {};
+		let currentVertex;
+
+		visited[start] = true;
+
+		while (queue.length) {
+			currentVertex = queue.shift();
+			result.push(currentVertex);
+
+			this.adjacencyList[currentVertex].forEach((item) => {
+				if (!visited[item]) {
+					visited[item] = true;
+					queue.push(item);
+				}
+			});
+		}
+
+		return result;
+	}
 }
