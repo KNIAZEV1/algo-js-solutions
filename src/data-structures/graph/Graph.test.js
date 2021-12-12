@@ -37,4 +37,21 @@ describe('Graph', () => {
 			expect(g.adjacencyList['Miami']).toEqual(['Dallas']);
 		});
 	});
+	describe('removeEdge', () => {
+		it('should return a valid adjacency list', () => {
+			const g = getGraphWithVertecies();
+
+			g.addEdge('Dallas', 'Miami');
+			g.addEdge('Dallas', 'Florida');
+			g.removeEdge('Dallas', 'Miami');
+
+			expect(g.adjacencyList['Miami']).toEqual([]);
+			expect(g.adjacencyList['Dallas']).toEqual(['Florida']);
+
+			g.removeEdge('Dallas', 'Florida');
+
+			expect(g.adjacencyList['Dallas']).toEqual([]);
+			expect(g.adjacencyList['Florida']).toEqual([]);
+		});
+	});
 });
