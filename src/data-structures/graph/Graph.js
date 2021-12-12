@@ -36,4 +36,48 @@ export class Graph {
 
 		delete this.adjacencyList[vertex];
 	}
+
+	DFSr(start) {
+		const result = [];
+		const visited = {};
+		const { adjacencyList } = this;
+
+		(function dfs(vertex) {
+			if (!vertex) return;
+
+			visited[vertex] = true;
+			result.push(vertex);
+
+			adjacencyList[vertex].forEach((item) => {
+				if (!visited[item]) {
+					return dfs(item);
+				}
+			});
+		})(start);
+
+		return result;
+	}
+
+	DFSi(start) {
+		const stack = [start];
+		const result = [];
+		const visited = {};
+		let currentVertex;
+
+		visited[start] = true;
+
+		while (stack.length) {
+			currentVertex = stack.pop();
+			result.push(currentVertex);
+
+			this.adjacencyList[currentVertex].forEach((item) => {
+				if (!visited[item]) {
+					visited[item] = true;
+					stack.push(item);
+				}
+			});
+		}
+
+		return result;
+	}
 }

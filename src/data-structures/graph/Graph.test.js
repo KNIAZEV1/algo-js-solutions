@@ -1,15 +1,5 @@
 import { Graph } from './Graph';
 
-function getGraphWithVertecies() {
-	const g = new Graph();
-
-	g.addVertex('Dallas');
-	g.addVertex('Florida');
-	g.addVertex('Miami');
-
-	return g;
-}
-
 describe('Graph', () => {
 	describe('addVertex', () => {
 		it('should return a valid adjacency list', () => {
@@ -68,4 +58,64 @@ describe('Graph', () => {
 			expect(g.adjacencyList['Miami']).toEqual([]);
 		});
 	});
+	describe('DFS', () => {
+		it('should return a valid list using recursive DFS', () => {
+			const g = getGraph();
+
+			expect(g.DFSr('A')).toEqual(['A', 'B', 'D', 'E', 'C', 'F']);
+		});
+		it('should return a valid list using interative DFS', () => {
+			const g = getGraph();
+
+			expect(g.DFSi('A')).toEqual(['A', 'C', 'E', 'F', 'D', 'B']);
+		});
+	});
 });
+
+function getGraphWithVertecies() {
+	const g = new Graph();
+
+	g.addVertex('Dallas');
+	g.addVertex('Florida');
+	g.addVertex('Miami');
+
+	return g;
+}
+
+function getGraph() {
+	const g = new Graph();
+
+	g.addVertex('A');
+	g.addVertex('B');
+	g.addVertex('C');
+	g.addVertex('D');
+	g.addVertex('E');
+	g.addVertex('F');
+
+	g.addEdge('A', 'B');
+	g.addEdge('A', 'C');
+	g.addEdge('B', 'D');
+	g.addEdge('C', 'E');
+	g.addEdge('D', 'E');
+	g.addEdge('D', 'F');
+	g.addEdge('E', 'F');
+
+	return g;
+}
+
+//      A
+//    /   \
+//   B    C
+//   |    |
+//   D -- E
+//   \    /
+//     F
+
+/* adjacencyList: {
+	A: [ 'B', 'C' ],
+	B: [ 'A', 'D' ],
+	C: [ 'A', 'E' ],
+	D: [ 'B', 'E', 'F' ],
+	E: [ 'C', 'D', 'F' ],
+	F: [ 'D', 'E' ]
+} */
