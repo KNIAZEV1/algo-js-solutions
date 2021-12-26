@@ -1,4 +1,4 @@
-### 54. Spiral Matrix (m)
+### 54. Spiral Matrix (medium)
 
 Given an m x n matrix, return all elements of the matrix in spiral order.
 
