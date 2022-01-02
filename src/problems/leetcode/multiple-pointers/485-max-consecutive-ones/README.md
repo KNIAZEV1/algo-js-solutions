@@ -1,4 +1,4 @@
-### 485. Max Consecutive Ones (easy, two-pointers)
+### 485. Max Consecutive Ones (easy, multiple-pointers)
 
 Given a binary array `nums`, return the maximum number of consecutive 1's in the array.
 

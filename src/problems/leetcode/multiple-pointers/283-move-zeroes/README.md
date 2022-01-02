@@ -1,4 +1,4 @@
-### 283. Move Zeroes (easy, two-pointers)
+### 283. Move Zeroes (easy, multiple-pointers)
 
 Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
 
