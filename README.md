@@ -3,7 +3,7 @@
 
 🧱 JavaScript algorithms and data structures
 
-✔️ JavaScript leetcode solutions
+✔️ JavaScript leetcode and BFE solutions
 
 🚀 Unit tests for each algo, ds and solution
 
