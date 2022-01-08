@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-// time: O(n), space: O(1)
+// time: O(n), space: O(n)
 export function findDisappearedNumbers(nums) {
 	const result = [];
 	const set = new Set(nums);

@@ -25,7 +25,7 @@ export function twoSum(nums, target) {
 	return [];
 }
 
-// using HashMap, time: O(n), space: O(1)
+// using HashMap, time: O(n), space: O(n)
 export function twoSum2(nums, target) {
 	const map = new Map();
 
