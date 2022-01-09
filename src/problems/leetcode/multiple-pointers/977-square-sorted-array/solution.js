@@ -15,13 +15,12 @@ export function sortedSquares(nums) {
 
 		if (leftPow > rightPow) {
 			result[nextInsertionIdx] = leftPow;
-			nextInsertionIdx--;
 			left++;
 		} else {
 			result[nextInsertionIdx] = rightPow;
-			nextInsertionIdx--;
 			right--;
 		}
+		nextInsertionIdx--;
 	}
 
 	return result;
