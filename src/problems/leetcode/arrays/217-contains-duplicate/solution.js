@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {boolean}
  */
-// using Set, time: O(n), space: O(n)
+// time: O(n), space: O(n)
 export function containsDuplicate(nums) {
 	// return new Set(nums).size < nums.length; - hacker's approach :D
 	const set = new Set();
