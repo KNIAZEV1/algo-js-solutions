@@ -2,6 +2,7 @@
  * @param {string} s
  * @return {number}
  */
+// time: O(n), space: O(n)
 export function lengthOfLongestSubstring(s) {
 	let max = 0;
 	let start = 0;
