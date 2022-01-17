@@ -1,4 +1,4 @@
-### 287. Find the Duplicate Number (medium, multiple-pointers)
+### 287. Find the Duplicate Number (medium, fast-slow pointers)
 
 Given an array of integers `nums` containing `n + 1` integers where each integer is in the range `[1, n]` inclusive.
 
