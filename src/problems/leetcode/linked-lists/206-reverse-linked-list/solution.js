@@ -25,7 +25,21 @@ export function reverseList(head) {
 	return prev;
 }
 
+// time: O(n), space: O(1)
 function reverseList2(head) {
+	let prev = null;
+
+	while (head) {
+		const temp = head.next;
+		head.next = prev;
+		prev = head;
+		head = temp;
+	}
+
+	return prev;
+}
+
+function reverseList3(head) {
 	const [prev, curr] = [null, head];
 
 	while (current) {
@@ -35,7 +49,7 @@ function reverseList2(head) {
 	return prev;
 }
 // recursive, time: O(n), space: O(n)
-function reverseList3(head) {
+function reverseList4(head) {
 	if (head == null || head.next == null) {
 		return head;
 	}
