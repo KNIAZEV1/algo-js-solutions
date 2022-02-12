@@ -1,3 +1,3 @@
 ## Sign-Up Form
 
-![Sign-up form prompt](./assets/problem.png)
+![Prompt](./assets/problem.png)
