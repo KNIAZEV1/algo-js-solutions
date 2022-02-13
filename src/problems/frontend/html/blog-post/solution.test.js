@@ -1,16 +1,10 @@
-const fs = require('fs');
-const path = require('path');
-const html = fs.readFileSync(
-	path.resolve(__dirname, './solution.html'),
-	'utf8'
-);
-const isElement = (el) => el instanceof Element;
+import { DOMTestEnv } from '../utils';
 
-jest.dontMock('fs');
+const DOM = new DOMTestEnv('blog-post');
 
 describe('blog post', () => {
 	beforeEach(() => {
-		document.documentElement.innerHTML = html.toString();
+		DOM.resetDom();
 	});
 	describe('markup', () => {
 		it('has correct text', () => {
@@ -76,7 +70,7 @@ enter the future. Copyright 3022 AlgoCoin. All rights reserved.";
 
 		it('uses hr tag between sections', () => {
 			const hr = document.querySelector('hr');
-			expect(isElement(hr)).toBe(true);
+			expect(DOM.isElement(hr)).toBe(true);
 			expect(
 				hr.previousElementSibling.textContent
 					.replace(/\s\s+/g, ' ')
@@ -94,7 +88,7 @@ enter the future. Copyright 3022 AlgoCoin. All rights reserved.";
 		it('uses article semantic grouping tag', () => {
 			const article = document.querySelector('article');
 			console.log('article', article);
-			expect(isElement(article)).toBe(true);
+			expect(DOM.isElement(article)).toBe(true);
 		});
 
 		it('uses semantic grouping tags correctly for header', () => {
